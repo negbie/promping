@@ -15,9 +15,9 @@ import (
 )
 
 var (
-	promPort = flag.Int("p", 9876, "Expose Prometheus metrics on this port.")
+	promPort = flag.Int("p", 9876, "Expose Prometheus metrics on this port")
 	targets  = flag.String("t", "localhost", "Single or comma seperated targets")
-	interval = flag.Int("i", 1, "Ping interval in seconds")
+	interval = flag.Int("i", 1, "Update interval in seconds")
 	dry      = flag.Bool("d", false, "Dry mode prints only to console")
 
 	rttMin = prometheus.NewGaugeVec(prometheus.GaugeOpts{
